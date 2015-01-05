@@ -36,7 +36,8 @@ locationLink() {
     else
         text=$curLocation
     fi
-    echo `markLink "$text" "$locationGMap" "$coordinate"`
+    result=`markLink "$text" "$locationGMap" "$coordinate"`
+    echo $result | tee /dev/tty | pbcopy
 }
 
 locationImage() {
@@ -46,7 +47,8 @@ locationImage() {
     else
         text=$curLocation
     fi
-    echo `markImage "$text" "$locationImgL" "$coordinate"`
+    result=`markImage "$text" "$locationImgL" "$coordinate"`
+    echo $result | tee /dev/tty | pbcopy
 }
 
 locationImglnk() {
@@ -56,7 +58,8 @@ locationImglnk() {
     else
         text="`locationImage` $curLocation"
     fi
-    echo `markLink "$text"  "$locationImgL" "$coordinate"`
+    result=`markLink "$text"  "$locationImgL" "$coordinate"`
+    echo $result | tee /dev/tty | pbcopy
 }
 
 showHelp() {
