@@ -1,7 +1,7 @@
 #!/bin/sh
 # `location` gets where you are, returns Markdown.
-# <3 for OS X ONLY currently
-# by @leaskh
+# for OS X ONLY currently
+# <3 by @leaskh
 
 # Requirement
 # `brew install whereami`
@@ -80,7 +80,8 @@ locationImglnk() {
 showHelp() {
     echo '`location` gets where you are, returns Markdown.'
     echo '================================================'
-    echo '<3 for OS X ONLY currently'
+    echo ''
+    echo 'for OS X ONLY currently'
     echo ''
     echo '- link   : Make Markdown location link block'
     echo '- image  : Make Markdown location image block'
