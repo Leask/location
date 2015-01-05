@@ -109,7 +109,7 @@ unknowCommand() {
 
 # Main logic
 configJson='&language=en-US&sensor=true'
-configImage='&zoom=13&size=640x480&scale=2'
+configImage='&zoom=13&size=640x320&scale=2'
 coordinate=''
 locationJson=''
 locationGMap=''
