@@ -38,7 +38,8 @@ locationLink() {
         text=$curLocation
     fi
     result=`markLink "$text" "$locationGMap" "$coordinate"`
-    echo $result | tee /dev/tty | pbcopy
+    echo $result | pbcopy
+    echo $result
 }
 
 locationImage() {
@@ -49,7 +50,8 @@ locationImage() {
         text=$curLocation
     fi
     result=`markImage "$text" "$locationImgL" "$coordinate"`
-    echo $result | tee /dev/tty | pbcopy
+    echo $result | pbcopy
+    echo $result
 }
 
 locationQrcode() {
@@ -79,8 +81,9 @@ locationImglnk() {
     else
         text="`locationImage` $curLocation"
     fi
-    result=`markLink "$text"  "$locationImgL" "$coordinate"`
-    echo $result | tee /dev/tty | pbcopy
+    result=`markLink "$text" "$locationGMap" "$coordinate"`
+    echo $result | pbcopy
+    echo $result
 }
 
 showHelp() {
