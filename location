@@ -13,9 +13,9 @@ init() {
         echo 'Error getting coordinate, please retry later.'
         exit 1
     fi
-    locationJson="https://maps.google.com/maps/api/geocode/json?latlng=${coordinate}&language=en-US&sensor=true"
+    locationJson="https://maps.google.com/maps/api/geocode/json?latlng=${coordinate}${configJson}"
     locationGMap="https://www.google.com/maps/place/${coordinate}"
-    locationImgL="https://maps.googleapis.com/maps/api/staticmap?center=${coordinate}&zoom=13&size=640x480&scale=2&markers=|${coordinate}"
+    locationImgL="https://maps.googleapis.com/maps/api/staticmap?center=${coordinate}${configImage}&markers=|${coordinate}"
     locations=`curl -s "$locationJson"`
     # locations=`proxychains4 curl -s "$locationJson"`
     curLocation=`echo $locations | jq -r '.results[0].formatted_address'`
@@ -76,6 +76,8 @@ unknowCommand() {
 }
 
 # Main logic
+configJson='&language=en-US&sensor=true'
+configImage='&zoom=13&size=640x480&scale=2'
 coordinate=''
 locationJson=''
 locationGMap=''
