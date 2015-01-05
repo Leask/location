@@ -1,0 +1,22 @@
+#!/bin/sh
+# `location` gets where you are.
+# for Mac OS X ONLY
+# by @leaskh
+
+# Requirement
+# `brew install whereami`
+# `brew install jq`
+
+coordinate=`whereami`
+locationJson="http://maps.google.com/maps/api/geocode/json?latlng=${coordinate}&language=en-US&sensor=true"
+locationGMap="https://www.google.com/maps/place/${coordinate}"
+locations=`proxychains4 curl -s "$locationJson"`
+curLocation=`echo $locations | jq -r '.results[0].formatted_address'`
+if [ "$curLocation" = 'null' ]; then
+    curLocation=''
+fi
+echo $curLocation;
+
+
+
+# URL="http://maps.google.com/maps?q=${LAT},${LON}($(hostname),+${MYIP},+$(echo $ERR | urlencode),+$(date | urlencode))&ie=UTF8&ll=${LAT},${LON}&t=roadmap&z=14&iwloc=A&mrt=loc"
