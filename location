@@ -6,6 +6,7 @@
 # Requirement
 # `brew install whereami`
 # `brew install jq`
+# `brew install qrencode`
 
 init() {
     coordinate=`whereami`
@@ -51,6 +52,11 @@ locationImage() {
     echo $result | tee /dev/tty | pbcopy
 }
 
+locationQrcode() {
+    init
+    qrencode "$locationGMap" -t UTF8
+}
+
 appleMap() {
     init
     open "http://maps.apple.com/?ll=${coordinate}"
@@ -83,12 +89,13 @@ showHelp() {
     echo ''
     echo 'for OS X ONLY currently'
     echo ''
-    echo '- link   : Make Markdown location link block'
-    echo '- image  : Make Markdown location image block'
-    echo '- imglnk : Make Markdown location link block with image'
-    echo '- amap   : Show current location in Apple Maps'
-    echo '- gmap   : Show current location in Google Maps'
-    echo '- gmpimg : Show current location in Google Maps with static image'
+    echo '- link   : Make a Markdown link block with Google Maps'
+    echo '- image  : Make a Markdown image block with Google Maps'
+    echo '- imglnk : Make a Markdown image link block with Google Maps'
+    echo '- qrcode : Show a url qrcode of Google Maps'
+    echo '- amap   : Show current location in Apple Maps app'
+    echo '- gmap   : Show current location in Google Maps web'
+    echo '- gmpimg : Show current location in Google Maps static image'
     echo '- help   : Show this infos'
 }
 
@@ -110,6 +117,7 @@ case "$1" in
     'link'  ) locationLink  ;;
     'image' ) locationImage ;;
     'imglnk') locationImglnk;;
+    'qrcode') locationQrcode;;
     'amap'  ) appleMap      ;;
     'gmap'  ) googleMap     ;;
     'gmpimg') googleMapImg  ;;
