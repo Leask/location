@@ -19,4 +19,5 @@ echo $curLocation;
 
 
 
+
 # URL="http://maps.google.com/maps?q=${LAT},${LON}($(hostname),+${MYIP},+$(echo $ERR | urlencode),+$(date | urlencode))&ie=UTF8&ll=${LAT},${LON}&t=roadmap&z=14&iwloc=A&mrt=loc"
