@@ -30,10 +30,10 @@ $ git clone https://github.com/Leask/BRICKS.git
 
 ```
 $ ./location imglnk 
-[![8 Hua Jia Nan Lu, LongGang ZhongXin Cheng, Longgang Qu, Shenzhen Shi, Guangdong Sheng, China, 518116](https://maps.googleapis.com/maps/api/staticmap?center=22.729064717127,114.241151021677&zoom=13&size=640x480&scale=2&markers=|22.729064717127,114.241151021677 "22.729064717127,114.241151021677") 8 Hua Jia Nan Lu, LongGang ZhongXin Cheng, Longgang Qu, Shenzhen Shi, Guangdong Sheng, China, 518116](https://www.google.com/maps/place/22.729064717127,114.241151021677 "22.729064717127,114.241151021677")
+[![8 Hua Jia Nan Lu, LongGang ZhongXin Cheng, Longgang Qu, Shenzhen Shi, Guangdong Sheng, China, 518116](https://maps.googleapis.com/maps/api/staticmap?center=22.7290694153437,114.241151369298&zoom=13&size=640x320&scale=2&markers=|22.7290694153437,114.241151369298 "22.7290694153437,114.241151369298") 8 Hua Jia Nan Lu, LongGang ZhongXin Cheng, Longgang Qu, Shenzhen Shi, Guangdong Sheng, China, 518116](https://www.google.com/maps/place/22.7290694153437,114.241151369298 "22.7290694153437,114.241151369298")
 ```
 
-[![8 Hua Jia Nan Lu, LongGang ZhongXin Cheng, Longgang Qu, Shenzhen Shi, Guangdong Sheng, China, 518116](https://maps.googleapis.com/maps/api/staticmap?center=22.729064717127,114.241151021677&zoom=13&size=640x480&scale=2&markers=|22.729064717127,114.241151021677 "22.729064717127,114.241151021677") 8 Hua Jia Nan Lu, LongGang ZhongXin Cheng, Longgang Qu, Shenzhen Shi, Guangdong Sheng, China, 518116](https://www.google.com/maps/place/22.729064717127,114.241151021677 "22.729064717127,114.241151021677")
+[![8 Hua Jia Nan Lu, LongGang ZhongXin Cheng, Longgang Qu, Shenzhen Shi, Guangdong Sheng, China, 518116](https://maps.googleapis.com/maps/api/staticmap?center=22.7290694153437,114.241151369298&zoom=13&size=640x320&scale=2&markers=|22.7290694153437,114.241151369298 "22.7290694153437,114.241151369298") 8 Hua Jia Nan Lu, LongGang ZhongXin Cheng, Longgang Qu, Shenzhen Shi, Guangdong Sheng, China, 518116](https://www.google.com/maps/place/22.7290694153437,114.241151369298 "22.7290694153437,114.241151369298")
 
 ## Getting help
 
