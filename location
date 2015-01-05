@@ -51,6 +51,21 @@ locationImage() {
     echo $result | tee /dev/tty | pbcopy
 }
 
+appleMap() {
+    init
+    open "http://maps.apple.com/?ll=${coordinate}"
+}
+
+googleMap() {
+    init
+    open "$locationGMap"
+}
+
+googleMapImg() {
+    init
+    open "$locationImgL"
+}
+
 locationImglnk() {
     init
     if [ "$curLocation" = 'null' ]; then
@@ -70,6 +85,9 @@ showHelp() {
     echo '- link   : Make Markdown location link block'
     echo '- image  : Make Markdown location image block'
     echo '- imglnk : Make Markdown location link block with image'
+    echo '- amap   : Show current location in Apple Maps'
+    echo '- gmap   : Show current location in Google Maps'
+    echo '- gmpimg : Show current location in Google Maps with static image'
     echo '- help   : Show this infos'
 }
 
@@ -91,6 +109,9 @@ case "$1" in
     'link'  ) locationLink  ;;
     'image' ) locationImage ;;
     'imglnk') locationImglnk;;
+    'amap'  ) appleMap      ;;
+    'gmap'  ) googleMap     ;;
+    'gmpimg') googleMapImg  ;;
     'help'  ) showHelp      ;;
     *       ) unknowCommand ;;
 esac
