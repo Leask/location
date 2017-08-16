@@ -4,12 +4,12 @@
 # by @leaskh w/ <3
 
 # Requirement
-# `brew install whereami`
+# `brew cask install corelocationcli`
 # `brew install jq`
 # `brew install qrencode`
 
 init() {
-    coordinate=`whereami`
+    coordinate=`CoreLocationCLI -format "%latitude,%longitude"`
     if [ "$coordinate" = '' ]; then
         echo 'Error getting coordinate, please retry later.'
         exit 1
